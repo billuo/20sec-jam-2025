@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://cxavyh8rt7yip"]
+
+[ext_resource type="AudioStream" uid="uid://833fwppvmicy" path="res://asset/sfx/326794__johnbuhr__sword_clash-48.wav" id="1_ym1kn"]
+[ext_resource type="AudioStream" uid="uid://c8ayn7xwrfn0r" path="res://asset/sfx/326795__johnbuhr__sword_clash-46.wav" id="2_0y34b"]
+[ext_resource type="AudioStream" uid="uid://bg3n5q3uf8d4k" path="res://asset/sfx/326796__johnbuhr__sword_clash-47.wav" id="3_5k3p7"]
+
+[resource]
+random_pitch = 1.05
+random_volume_offset_db = 1.0
+streams_count = 3
+stream_0/stream = ExtResource("1_ym1kn")
+stream_1/stream = ExtResource("2_0y34b")
+stream_2/stream = ExtResource("3_5k3p7")

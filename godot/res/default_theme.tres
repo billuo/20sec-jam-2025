@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://n7e3b7lgxcxg"]
+
+[resource]
+default_font_size = 32
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8

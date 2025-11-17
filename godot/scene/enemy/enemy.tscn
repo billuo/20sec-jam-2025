@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbqy0kh3efvqy"]
+
+[ext_resource type="Script" uid="uid://dwdc8g5rn8gwf" path="res://scene/enemy/enemy.gd" id="1_yijav"]
+[ext_resource type="Texture2D" uid="uid://dsixvd7gt5jj7" path="res://asset/stance_indicator.png" id="2_nytjq"]
+[ext_resource type="BoxMesh" uid="uid://ccm2fagvxquln" path="res://scene/enemy/enemy_mesh.tres" id="2_tu2m7"]
+
+[node name="Enemy" type="Node3D"]
+script = ExtResource("1_yijav")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = ExtResource("2_tu2m7")
+
+[node name="StanceIndicator" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7714932, 0.27007318)
+pixel_size = 0.005
+shaded = true
+texture = ExtResource("2_nytjq")
+hframes = 4

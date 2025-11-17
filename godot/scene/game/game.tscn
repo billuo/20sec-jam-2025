@@ -1,0 +1,183 @@
+[gd_scene load_steps=27 format=3 uid="uid://c7et4aa1txh8q"]
+
+[ext_resource type="Script" uid="uid://1v2mq134h4rp" path="res://scene/game/game.gd" id="1_8xedm"]
+[ext_resource type="Texture2D" uid="uid://b7bljaiai15fd" path="res://asset/texture/AllSkyFree_Sky_ColdNight_Equirect.png" id="2_0tn4t"]
+[ext_resource type="Theme" uid="uid://n7e3b7lgxcxg" path="res://res/default_theme.tres" id="2_l2vx3"]
+[ext_resource type="FontFile" uid="uid://w1oxguovrmmw" path="res://asset/font/ickyticket-mono.regular.ttf" id="2_pw1yp"]
+[ext_resource type="Script" uid="uid://cru5aim48lp31" path="res://scene/game/player.gd" id="3_7d2hf"]
+[ext_resource type="AudioStream" uid="uid://cxavyh8rt7yip" path="res://res/sword_clash.tres" id="4_7d2hf"]
+[ext_resource type="Script" uid="uid://bqoxedak48mfe" path="res://scene/game/game_start_label.gd" id="4_82mss"]
+[ext_resource type="AudioStream" uid="uid://bw68avq6hs0my" path="res://res/sword_slash.tres" id="5_c7fbu"]
+[ext_resource type="Texture2D" uid="uid://c0m7e5x25g2tg" path="res://asset/texture/prototype_floor.svg" id="5_tr56l"]
+[ext_resource type="AudioStream" uid="uid://htiy3tnhcvdk" path="res://asset/sfx/Voice_Male_V2_Pain_Mono_04.wav" id="6_8u7u6"]
+[ext_resource type="PackedScene" uid="uid://dqvrm4p3wilyr" path="res://asset/backdrop.glb" id="7_5nn1g"]
+[ext_resource type="AudioStream" uid="uid://cequiheojk1kx" path="res://asset/sfx/Backpack_Medium_Polyester_Drop_Stereo.wav" id="7_yv2ml"]
+[ext_resource type="Texture2D" uid="uid://b6mspgp38k43e" path="res://asset/texture/death_message.png" id="10_v4hye"]
+[ext_resource type="Texture2D" uid="uid://bk2bblgo6tjet" path="res://asset/texture/win_message.png" id="12_oixtr"]
+[ext_resource type="AudioStream" uid="uid://bl1or6x06uu4h" path="res://asset/sfx/single-church-bell-2-352062.mp3" id="14_2rwqa"]
+[ext_resource type="AudioStream" uid="uid://cnh04a6pmr6ct" path="res://asset/sfx/Ambiance_Wind_Forest_Loop_Stereo.wav" id="15_o100e"]
+[ext_resource type="AudioStream" uid="uid://cycxjl4onk23q" path="res://asset/sfx/singing-bowl-strike-sound-84682.mp3" id="15_okn60"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5nn1g"]
+panorama = ExtResource("2_0tn4t")
+
+[sub_resource type="Sky" id="Sky_cirq1"]
+sky_material = SubResource("PanoramaSkyMaterial_5nn1g")
+
+[sub_resource type="Environment" id="Environment_82mss"]
+background_mode = 2
+background_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+sky = SubResource("Sky_cirq1")
+sky_rotation = Vector3(0, 3.1415927, 0)
+ambient_light_source = 3
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2vx3"]
+metallic = 1.0
+roughness = 0.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8xedm"]
+material = SubResource("StandardMaterial3D_l2vx3")
+top_radius = 0.02
+bottom_radius = 0.05
+height = 1.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_l2vx3"]
+font = ExtResource("2_pw1yp")
+font_size = 48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tn4t"]
+albedo_texture = ExtResource("5_tr56l")
+metallic_specular = 0.0
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_82mss"]
+material = SubResource("StandardMaterial3D_0tn4t")
+size = Vector2(10, 10)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_cirq1"]
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_8xedm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_82mss")
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("3_7d2hf")
+
+[node name="Weapon" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(0.64278764, -0.26200262, 0.7198463, 0, 0.9396926, 0.34202012, -0.76604444, -0.21984631, 0.6040228, 0.6, -0.3, -1.2)
+mesh = SubResource("CylinderMesh_8xedm")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player"]
+light_color = Color(1, 0.944, 0.84000003, 1)
+light_size = 0.1
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="SFX" type="Node3D" parent="Player"]
+
+[node name="SwordClash" type="AudioStreamPlayer3D" parent="Player/SFX"]
+stream = ExtResource("4_7d2hf")
+
+[node name="SwordSlash" type="AudioStreamPlayer3D" parent="Player/SFX"]
+stream = ExtResource("5_c7fbu")
+
+[node name="DeathGroan" type="AudioStreamPlayer3D" parent="Player/SFX"]
+stream = ExtResource("6_8u7u6")
+
+[node name="DeathFall" type="AudioStreamPlayer3D" parent="Player/SFX"]
+stream = ExtResource("7_yv2ml")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_l2vx3")
+
+[node name="TimeLeftLabel" type="Label" parent="UI/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "20.00"
+label_settings = SubResource("LabelSettings_l2vx3")
+
+[node name="GameStartLabel" type="Label" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "PRESS ANY KEY"
+script = ExtResource("4_82mss")
+
+[node name="GameRestartLabel" type="Label" parent="UI/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Press R to Restart"
+
+[node name="DeathMessage" type="TextureRect" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_v4hye")
+
+[node name="WinMessage" type="TextureRect" parent="UI"]
+unique_name_in_owner = true
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_oixtr")
+
+[node name="Transition" type="ColorRect" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+mesh = SubResource("PlaneMesh_82mss")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_cirq1")
+
+[node name="backdrop" parent="." instance=ExtResource("7_5nn1g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.5, -50)
+
+[node name="SFX" type="Node3D" parent="."]
+
+[node name="GameOver" type="AudioStreamPlayer3D" parent="SFX"]
+stream = ExtResource("14_2rwqa")
+pitch_scale = 0.7
+
+[node name="YouWin" type="AudioStreamPlayer3D" parent="SFX"]
+stream = ExtResource("15_okn60")
+
+[node name="Ambience" type="AudioStreamPlayer3D" parent="SFX"]
+stream = ExtResource("15_o100e")
+autoplay = true
+
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="start_requested" from="UI/MarginContainer/GameStartLabel" to="." method="_on_game_start_label_start_requested"]
