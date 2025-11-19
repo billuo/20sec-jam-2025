@@ -4,18 +4,25 @@ extends Node3D
 signal attack_issued(enemy: Enemy)
 signal died
 
+enum State {
+	Approaching,
+}
+
+var dead := false
+var target_position: Vector3
 var stance := Player.Stance.None
 
-# @onready var stm: STMInstance3D = $STMCachedInstance3D
 @onready var stance_indicator: Sprite3D = $StanceIndicator
+@onready var ap: AnimationPlayer = $Node3D/Mannequin/AnimationPlayer
 
 
 func _ready() -> void:
 	stance = [Player.Stance.Left, Player.Stance.Up, Player.Stance.Right].pick_random()
 	stance_indicator.frame = int(stance)
 	var tween = create_tween()
-	tween.tween_property(self, "global_position", global_position + Vector3.BACK * 3.0, 1.0)
-	tween.finished.connect(func(): attack_issued.emit(self))
+	tween.tween_property(self, "position", target_position, 1.0)
+	tween.finished.connect(_on_target_arrived)
+	ap.play(&"Walk")
 
 
 func take_damage():
@@ -24,24 +31,21 @@ func take_damage():
 
 
 func die():
-	died.emit()
+	dead = true
 	stance_indicator.hide()
+	ap.play(&"Death01")
+	died.emit()
+	await ap.animation_finished
 	var tween = create_tween()
-	tween.tween_property(self, "rotation:x", -PI / 2.0, 0.3).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "position", position - Vector3(0.0, 1.0, 0.0), 1.0)
 	await tween.finished
-	await get_tree().create_timer(1.0).timeout
 	queue_free()
 
 
-func _tmp():
-	# stm.smash_the_mesh()
-	# _smash_mesh_impulse.call_deferred()
-	# func _smash_mesh_impulse():
-	# 	var pos = global_position
-	# 	var callback = func(rb: RigidBody3D, _from):
-	# 		var dir = (rb.global_position - pos).normalized()
-	# 		var random = (Vector3(randf(), randf(), randf()) * 2.0 - Vector3.ONE).normalized()
-	# 		rb.apply_impulse(dir * 2.0 + random * 0.5)
-	# 		get_tree().create_timer(2.0).timeout.connect(rb.queue_free)
-	# 	stm.chunks_iterate(callback)
-	pass
+func _on_target_arrived():
+	ap.play(&"Idle")
+	await get_tree().create_timer(0.2).timeout
+	ap.play(&"Sword_Attack")
+	await get_tree().create_timer(0.45).timeout
+	if not dead:
+		attack_issued.emit(self)

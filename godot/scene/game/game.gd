@@ -71,8 +71,11 @@ func spawn_enemy():
 	var enemy: Enemy = preload("res://scene/enemy/enemy.tscn").instantiate()
 	enemy.attack_issued.connect(_on_enemy_attack_issued)
 	enemy.died.connect(func(): get_tree().create_timer(0.5).timeout.connect(func(): spawn_enemy()))
-	# TODO: enemies should approach from various directions
-	enemy.position = Vector3(0.0, 0.0, -5.0)
+	var pos = Vector3(randf_range(-1.0, 1.0), 0.0, -5.0)
+	var dir_xz = (Vector3(player.position.x, 0.0, player.position.z) - pos).normalized()
+	enemy.position = pos
+	enemy.target_position = Vector3(player.position.x, 0.0, player.position.z) - dir_xz * 1.5
+	enemy.look_at_from_position(pos, player.position)
 	add_child(enemy)
 
 

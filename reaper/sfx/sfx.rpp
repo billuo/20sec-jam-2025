@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.45/win64" 1763372923
+<REAPER_PROJECT 0.1 "7.45/win64" 1763381870
   <NOTES 0 2
   >
   RIPPLE 0 0
@@ -18,7 +18,7 @@
   VIDEO_CONFIG 0 0 65792
   PANMODE 3
   PANLAWFLAGS 3
-  CURSOR 0.77797628140904
+  CURSOR 0.28161455475798
   ZOOM 777.65866962453595 0 0
   VZOOMEX 6 0
   USE_REC_CFG 0
@@ -32,14 +32,14 @@
   >
   <APPLYFX_CFG
   >
-  RENDER_FILE ""
-  RENDER_PATTERN ""
-  RENDER_FMT 0 2 0
+  RENDER_FILE C:\projects\Jams\let_me_solo\godot\asset\sfx
+  RENDER_PATTERN $track
+  RENDER_FMT 0 2 44100
   RENDER_1X 0
-  RENDER_RANGE 1 0 0 0 1000
+  RENDER_RANGE 4 0 0 0 1000
   RENDER_RESAMPLE 3 0 1
   RENDER_ADDTOPROJ 0
-  RENDER_STEMS 0
+  RENDER_STEMS 32
   RENDER_DITHER 0
   RENDER_TRIM 0 0 0 0
   TIMELOCKMODE 1
@@ -205,7 +205,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
-    SEL 0
+    SEL 1
     REC 0 0 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -225,7 +225,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {35B00441-9B74-4CC2-87EE-AFC720B1F689}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -253,7 +253,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -273,7 +273,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0.04372098110398 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {B2ECE325-4345-49DF-A8B7-FD65363AC7AB}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -321,7 +321,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {DDCB8387-EC4A-4F4D-8048-731DAFD36653}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -369,7 +369,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {53BF1F7A-F0B1-4D4B-892E-34A444C0E60E}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -390,7 +390,7 @@
     AUTOMODE 0
     PANLAWFLAGS 3
     VOLPAN 1 0 -1 -1 1
-    MUTESOLO 0 2 0
+    MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
     ISBUS 0 0
@@ -417,7 +417,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {ED3759FC-51FE-4401-B67A-41ACE4219FFA}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3

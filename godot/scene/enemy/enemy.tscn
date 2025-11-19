@@ -1,19 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbqy0kh3efvqy"]
+[gd_scene load_steps=5 format=3 uid="uid://dbqy0kh3efvqy"]
 
 [ext_resource type="Script" uid="uid://dwdc8g5rn8gwf" path="res://scene/enemy/enemy.gd" id="1_yijav"]
+[ext_resource type="PackedScene" uid="uid://bhsevyfwh55ai" path="res://scene/enemy/mannequin.tscn" id="2_dd7y5"]
 [ext_resource type="Texture2D" uid="uid://dsixvd7gt5jj7" path="res://asset/stance_indicator.png" id="2_nytjq"]
 [ext_resource type="BoxMesh" uid="uid://ccm2fagvxquln" path="res://scene/enemy/enemy_mesh.tres" id="2_tu2m7"]
 
 [node name="Enemy" type="Node3D"]
 script = ExtResource("1_yijav")
 
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, 0, 0, 0)
+
+[node name="Mannequin" parent="Node3D" instance=ExtResource("2_dd7y5")]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+visible = false
 mesh = ExtResource("2_tu2m7")
 
 [node name="StanceIndicator" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7714932, 0.27007318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7714932, -0.38857877)
+sorting_offset = 1.0
 pixel_size = 0.005
+billboard = 1
 shaded = true
 texture = ExtResource("2_nytjq")
 hframes = 4
