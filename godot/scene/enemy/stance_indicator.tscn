@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1v0kb1mkhom"]
+
+[ext_resource type="Script" uid="uid://8iepikwtv556" path="res://scene/enemy/stance_indicator.gd" id="1_plw0i"]
+[ext_resource type="Texture2D" uid="uid://dtc3bm81t0g7i" path="res://asset/vfx_prompts/indicator_sharp.svg" id="2_m5e8h"]
+
+[node name="StanceIndicator" type="Node3D"]
+script = ExtResource("1_plw0i")
+
+[node name="Active" type="Sprite3D" parent="."]
+sorting_offset = 1.0
+pixel_size = 0.002
+billboard = 1
+texture = ExtResource("2_m5e8h")
+hframes = 5
+
+[node name="Base" type="Sprite3D" parent="."]
+sorting_offset = 1.0
+pixel_size = 0.002
+billboard = 1
+texture = ExtResource("2_m5e8h")
+hframes = 5

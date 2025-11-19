@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2uhnmdbqjd7e"]
+
+[ext_resource type="Texture2D" uid="uid://d3ur1g7yvhpus" path="res://asset/vfx_prompts/slash.png" id="1_4vdlx"]
+[ext_resource type="Script" uid="uid://dlskifomljpc6" path="res://scene/enemy/vfx_slash.gd" id="2_lo7g8"]
+
+[node name="VfxSlash" type="Sprite3D"]
+pixel_size = 0.007
+texture = ExtResource("1_4vdlx")
+vframes = 6
+script = ExtResource("2_lo7g8")

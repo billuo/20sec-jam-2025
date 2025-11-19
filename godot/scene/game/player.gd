@@ -2,6 +2,7 @@ class_name Player
 extends Node3D
 
 signal died
+signal attack_issued
 
 enum Stance {
 	None,
@@ -42,22 +43,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			stance = Stance.None
 	elif event.is_action_pressed(&"attack"):
-		print_debug("attack")
+		attack_issued.emit()
 
 
 func check_guard(enemy: Enemy):
 	if stance == enemy.stance:
 		$SFX/SwordClash.play()
-		await get_tree().create_timer(0.5).timeout
-		$SFX/SwordSlash.play()
-		enemy.take_damage()
+		enemy.state = Enemy.State.Stun
 	else:
+		enemy.state = Enemy.State.Idle
 		$SFX/SwordSlash.play()
-		take_damage()
+		self.take_damage()
 
 
 func take_damage():
-	print_debug("player took damage")
 	die()
 
 

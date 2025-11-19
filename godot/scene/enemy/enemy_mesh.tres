@@ -1,9 +1,0 @@
-[gd_resource type="BoxMesh" load_steps=2 format=3 uid="uid://ccm2fagvxquln"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtpcx"]
-albedo_color = Color(0.034399994, 0.43, 0.17286006, 1)
-metallic_specular = 0.0
-
-[resource]
-material = SubResource("StandardMaterial3D_wtpcx")
-size = Vector3(0.5, 1.2, 0.5)

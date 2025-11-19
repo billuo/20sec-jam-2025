@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhafrglc1uv5e"]
+
+[ext_resource type="PackedScene" uid="uid://dw6grdstg2v3g" path="res://asset/model/stun_indicator.glb" id="1_xbabu"]
+
+[node name="stun_indicator" instance=ExtResource("1_xbabu")]
+
+[node name="Main" parent="." index="0"]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Spin"

@@ -1,0 +1,482 @@
+<REAPER_PROJECT 0.1 "7.45/win64" 1763381870
+  <NOTES 0 2
+  >
+  RIPPLE 0 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 129
+  ENVATTACH 3
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  ENVFADESZ10 40
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 0
+  GRID 3455 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 65792
+  PANMODE 3
+  PANLAWFLAGS 3
+  CURSOR 0.28161455475798
+  ZOOM 777.65866962453595 0 0
+  VZOOMEX 6 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "Media" ""
+  <RECORD_CFG
+    ZXZhdxgAAQ==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE C:\projects\Jams\let_me_solo\godot\asset\sfx
+  RENDER_PATTERN $track
+  RENDER_FMT 0 2 44100
+  RENDER_1X 0
+  RENDER_RANGE 4 0 0 0 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 32
+  RENDER_DITHER 0
+  RENDER_TRIM 0 0 0 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 1
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    ZXZhdxgAAQ==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    BEATLEN 4
+    FREQ 1760 880 1
+    SAMPLES "" "" "" ""
+    SPLIGNORE 0 0
+    SPLDEF 2 660 "" 0 ""
+    SPLDEF 3 440 "" 0 ""
+    PATTERN 0 169
+    PATTERNSTR ABBB
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4 0
+  PLAYRATE 1 0 0.25 4
+  SELECTION 0 0
+  SELECTION2 0 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_PANMODE 3
+  MASTER_PANLAWFLAGS 3
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    EGUID {684D3D91-EB21-4C0E-A5C8-A70BAC0A1694}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {DA1EA847-6822-4AA6-A38F-F8C85248A582}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {432A2D8B-B437-46FB-A8AF-E4249325E750}
+    NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {432A2D8B-B437-46FB-A8AF-E4249325E750}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 18.27
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1.1 0.01 1.8 1 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8D8332A5-989E-4BE0-9D8B-D02A23509A17}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {FE852702-CF44-4D2F-9FD4-17A0F9B20700}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 16.47
+      SNAPOFFS 0
+      LENGTH 3.07
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1.1 0.01 1.8 1 1 0 0
+      FADEOUT 1.1 0.01 1.02 1 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C047E444-BEA3-4633-AB1A-6FE5CF12F4EA}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 22.02
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8BE67168-BB09-45F8-9F65-D6CCD4DEED85}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+    <ITEM
+      POSITION 18.52
+      SNAPOFFS 0
+      LENGTH 2.68
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1.1 0.01 1.02 1 1 0 0
+      FADEOUT 1 0.01 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {62905846-49E4-4D2E-9395-C33EFDD43CB9}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 19.34
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {3701BF78-BEA2-468E-B09C-0D2EB2A4F064}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {981F6CF3-ACDB-4650-9AD2-72A28A9AFF2B}
+    NAME sword_slash_heavy_1
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 1
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {981F6CF3-ACDB-4650-9AD2-72A28A9AFF2B}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.90270966867628
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {35B00441-9B74-4CC2-87EE-AFC720B1F689}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 18.33172373802921
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9929845B-C1B4-4816-8D6A-3B5D85AFF9DF}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {FC181AA7-EA32-42D9-9413-DEEAEFC84F6F}
+    NAME sword_slash_heavy_2
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {FC181AA7-EA32-42D9-9413-DEEAEFC84F6F}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.56708684314279
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0.04372098110398 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {B2ECE325-4345-49DF-A8B7-FD65363AC7AB}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 25.1298632474772
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {FB2BFEAA-9DA7-4C24-ACC1-F18D5D0FBF59}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {5A0D0F3B-DB8F-43F1-A8A0-F757A5D7BA92}
+    NAME sword_slash_1
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {5A0D0F3B-DB8F-43F1-A8A0-F757A5D7BA92}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.53622497412822
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {DDCB8387-EC4A-4F4D-8048-731DAFD36653}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 26.27829004659673
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {BE183283-DA29-4D4E-B4DB-2EDD2A4AC5B8}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {B6C63D30-D322-4F70-8ED2-7689A3C878B6}
+    NAME sword_slash_2
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {B6C63D30-D322-4F70-8ED2-7689A3C878B6}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.50536310511364
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {53BF1F7A-F0B1-4D4B-892E-34A444C0E60E}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 27.42629280352191
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0C594896-87A3-44BF-A634-436E0997C3C0}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {DAE5042F-B08D-4B37-A782-65A73FCC2B9B}
+    NAME sword_slash_3
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {DAE5042F-B08D-4B37-A782-65A73FCC2B9B}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.46164212400966
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {ED3759FC-51FE-4401-B67A-41ACE4219FFA}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 28.49529418198447
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {3D92D26F-A2B9-48FA-AC98-3DEC352BB385}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {3D3E066E-5040-4121-8066-BF4A654DC058}
+    NAME ""
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {3D3E066E-5040-4121-8066-BF4A654DC058}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 18.75224520723301
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5EE7B74F-429A-45DA-A646-891C8CB7C643}
+      IID 1
+      NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
+      VOLPAN 1 0 1 -1
+      SOFFS 29.00065728709809
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A9DD250F-E811-473C-A9D5-5C5D1BF39131}
+      <SOURCE MP3
+        FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+>

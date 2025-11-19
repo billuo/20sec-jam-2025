@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.45/win64" 1763381870
+<REAPER_PROJECT 0.1 "7.45/win64" 1763561161
   <NOTES 0 2
   >
   RIPPLE 0 0
@@ -18,9 +18,9 @@
   VIDEO_CONFIG 0 0 65792
   PANMODE 3
   PANLAWFLAGS 3
-  CURSOR 0.28161455475798
-  ZOOM 777.65866962453595 0 0
-  VZOOMEX 6 0
+  CURSOR 0
+  ZOOM 71.04526911253222 0 0
+  VZOOMEX 5.88338947 0
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
@@ -41,7 +41,6 @@
   RENDER_ADDTOPROJ 0
   RENDER_STEMS 32
   RENDER_DITHER 0
-  RENDER_TRIM 0 0 0 0
   TIMELOCKMODE 1
   TEMPOENVLOCKMODE 1
   ITEMMIX 1
@@ -49,7 +48,7 @@
   TAKELANE 1
   SAMPLERATE 44100 0 0
   <RENDER_CFG
-    ZXZhdxgAAQ==
+    bDNwbQABAAAAAAAAAgAAAP////8EAAAAAAEAAAAAAAA=
   >
   LOCK 1
   <METRONOME 6 2
@@ -205,7 +204,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -225,7 +224,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 1
+      SEL 0
       IGUID {35B00441-9B74-4CC2-87EE-AFC720B1F689}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -273,7 +272,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0.04372098110398 0 1 0 0 0
       MUTE 0 0
-      SEL 1
+      SEL 0
       IGUID {B2ECE325-4345-49DF-A8B7-FD65363AC7AB}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -321,7 +320,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 1
+      SEL 0
       IGUID {DDCB8387-EC4A-4F4D-8048-731DAFD36653}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -369,7 +368,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 1
+      SEL 0
       IGUID {53BF1F7A-F0B1-4D4B-892E-34A444C0E60E}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -417,7 +416,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 1
+      SEL 0
       IGUID {ED3759FC-51FE-4401-B67A-41ACE4219FFA}
       IID 1
       NAME best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3
@@ -476,6 +475,54 @@
       GUID {A9DD250F-E811-473C-A9D5-5C5D1BF39131}
       <SOURCE MP3
         FILE "Media\best-sword-sounds-slice-slash-crash-swoosh-etc-224090.mp3" 1
+      >
+    >
+  >
+  <TRACK {1F018B0E-30C5-44B8-9943-6F796E609D5C}
+    NAME Ambiance_Wind_Forest_Loop_Stereo
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 2 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 1
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {1F018B0E-30C5-44B8-9943-6F796E609D5C}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 29.91902083333332
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {B74B78B8-E79C-49FE-A493-C97EEC329A24}
+      IID 10
+      NAME Ambiance_Wind_Forest_Loop_Stereo.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E6EF2BDF-9B7B-4D04-84BA-09855AFAF616}
+      <SOURCE WAVE
+        FILE "Media\Ambiance_Wind_Forest_Loop_Stereo.wav"
       >
     >
   >

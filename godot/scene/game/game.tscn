@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c7et4aa1txh8q"]
+[gd_scene load_steps=33 format=3 uid="uid://c7et4aa1txh8q"]
 
 [ext_resource type="Script" uid="uid://1v2mq134h4rp" path="res://scene/game/game.gd" id="1_8xedm"]
 [ext_resource type="Texture2D" uid="uid://b7bljaiai15fd" path="res://asset/texture/AllSkyFree_Sky_ColdNight_Equirect.png" id="2_0tn4t"]
@@ -8,15 +8,20 @@
 [ext_resource type="AudioStream" uid="uid://cxavyh8rt7yip" path="res://res/sword_clash.tres" id="4_7d2hf"]
 [ext_resource type="Script" uid="uid://bqoxedak48mfe" path="res://scene/game/game_start_label.gd" id="4_82mss"]
 [ext_resource type="AudioStream" uid="uid://bw68avq6hs0my" path="res://res/sword_slash.tres" id="5_c7fbu"]
-[ext_resource type="Texture2D" uid="uid://c0m7e5x25g2tg" path="res://asset/texture/prototype_floor.svg" id="5_tr56l"]
 [ext_resource type="AudioStream" uid="uid://htiy3tnhcvdk" path="res://asset/sfx/Voice_Male_V2_Pain_Mono_04.wav" id="6_8u7u6"]
-[ext_resource type="PackedScene" uid="uid://dqvrm4p3wilyr" path="res://asset/backdrop.glb" id="7_5nn1g"]
 [ext_resource type="AudioStream" uid="uid://cequiheojk1kx" path="res://asset/sfx/Backpack_Medium_Polyester_Drop_Stereo.wav" id="7_yv2ml"]
 [ext_resource type="Texture2D" uid="uid://b6mspgp38k43e" path="res://asset/texture/death_message.png" id="10_v4hye"]
 [ext_resource type="Texture2D" uid="uid://bk2bblgo6tjet" path="res://asset/texture/win_message.png" id="12_oixtr"]
+[ext_resource type="Texture2D" uid="uid://dkphykkfe0gf0" path="res://asset/texture/Dirt/Dirt_DIFF.jpg" id="13_4qy8q"]
 [ext_resource type="AudioStream" uid="uid://bl1or6x06uu4h" path="res://asset/sfx/single-church-bell-2-352062.mp3" id="14_2rwqa"]
-[ext_resource type="AudioStream" uid="uid://cnh04a6pmr6ct" path="res://asset/sfx/Ambiance_Wind_Forest_Loop_Stereo.wav" id="15_o100e"]
+[ext_resource type="Texture2D" uid="uid://ct0t80b4yp1nr" path="res://asset/texture/Dirt/Dirt_OCC.jpg" id="14_ywpmx"]
 [ext_resource type="AudioStream" uid="uid://cycxjl4onk23q" path="res://asset/sfx/singing-bowl-strike-sound-84682.mp3" id="15_okn60"]
+[ext_resource type="Texture2D" uid="uid://c0lawo3rev0ak" path="res://asset/texture/Dirt/Dirt_DISP.jpg" id="15_osgb2"]
+[ext_resource type="Texture2D" uid="uid://duxanvjwov1yo" path="res://asset/texture/Dirt/Dirt_SPEC.jpg" id="16_xx4si"]
+[ext_resource type="Texture2D" uid="uid://d3727qtaqhsqf" path="res://asset/texture/Dirt/Dirt_NRM.jpg" id="17_7utin"]
+[ext_resource type="Texture2D" uid="uid://cr1gnw2vgjmof" path="res://asset/texture/Dirt/Dirt_RGH.png" id="18_uisti"]
+[ext_resource type="AudioStream" uid="uid://d1568x6smynkt" path="res://asset/sfx/Ambiance_Wind_Forest_Loop_Stereo.mp3" id="21_4qy8q"]
+[ext_resource type="Texture2D" uid="uid://u5bfjnqa3cje" path="res://asset/texture/Backdrop004_1K_Color.png" id="22_4qy8q"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5nn1g"]
 panorama = ExtResource("2_0tn4t")
@@ -46,13 +51,25 @@ height = 1.5
 font = ExtResource("2_pw1yp")
 font_size = 48
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tn4t"]
-albedo_texture = ExtResource("5_tr56l")
-metallic_specular = 0.0
+[sub_resource type="LabelSettings" id="LabelSettings_4qy8q"]
+font_size = 64
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qy8q"]
+albedo_texture = ExtResource("13_4qy8q")
+metallic = 1.0
+metallic_texture = ExtResource("16_xx4si")
+roughness_texture = ExtResource("18_uisti")
+normal_enabled = true
+normal_texture = ExtResource("17_7utin")
+ao_enabled = true
+ao_texture = ExtResource("14_ywpmx")
+heightmap_enabled = true
+heightmap_scale = 0.5
+heightmap_texture = ExtResource("15_osgb2")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_82mss"]
-material = SubResource("StandardMaterial3D_0tn4t")
+material = SubResource("StandardMaterial3D_4qy8q")
 size = Vector2(10, 10)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_cirq1"]
@@ -126,6 +143,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Press R to Restart"
 
+[node name="HelpLabel" type="Label" parent="UI/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Block before attack"
+label_settings = SubResource("LabelSettings_4qy8q")
+
 [node name="DeathMessage" type="TextureRect" parent="UI"]
 unique_name_in_owner = true
 visible = false
@@ -163,9 +189,6 @@ mesh = SubResource("PlaneMesh_82mss")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_cirq1")
 
-[node name="backdrop" parent="." instance=ExtResource("7_5nn1g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.5, -50)
-
 [node name="SFX" type="Node3D" parent="."]
 
 [node name="GameOver" type="AudioStreamPlayer3D" parent="SFX"]
@@ -176,8 +199,14 @@ pitch_scale = 0.7
 stream = ExtResource("15_okn60")
 
 [node name="Ambience" type="AudioStreamPlayer3D" parent="SFX"]
-stream = ExtResource("15_o100e")
+stream = ExtResource("21_4qy8q")
 autoplay = true
+
+[node name="Backdrop" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1, -25.06)
+shaded = true
+double_sided = false
+texture = ExtResource("22_4qy8q")
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="start_requested" from="UI/MarginContainer/GameStartLabel" to="." method="_on_game_start_label_start_requested"]
